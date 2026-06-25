@@ -1,1 +1,0 @@
-# Boarden-App-Entrance-Animation

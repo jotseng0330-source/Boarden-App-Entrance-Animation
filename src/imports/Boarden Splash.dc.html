@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; }
+  </style>
+</helmet>
+<div style="position:fixed; inset:0; background:#000;">
+  <x-import component="Stage" from="./animations.jsx" width="1080" height="1920" duration="4.25" background="#000" persist-key="boarden-splash" hint-size="100%,100%">
+    <x-import component="BoardenSplash" from="./scenes.jsx" hint-size="100%,100%"></x-import>
+  </x-import>
+</div>
+</x-dc>
+</body>
+</html>
