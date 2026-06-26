@@ -235,12 +235,12 @@ function PlaybackBar({ time, duration, playing, onPlayPause, onReset, onSeek, on
 const BRAND = { orange: "#F6A623", red: "#E2504A", blue: "#2E9FE8", glyph: "rgba(255,255,255,0.85)", ink: "#F4F4F6" };
 const seg = (t: number, a: number, b: number) => clamp((t - a) / (b - a), 0, 1);
 
-const B_FONT = 290, B_LEFT = 40, B_TOP = 50, LINE_H = 22, XR = 308;
-const LINES = [
-  { x0: 205, x1: XR, cy: 103 },
-  { x0: 233, x1: XR, cy: 161 },
-  { x0: 245, x1: XR, cy: 219 },
-  { x0: 222, x1: XR, cy: 277 },
+const B_FONT = 255, B_LEFT = 40, B_TOP = 65, LINE_H = 20, XR = 320;
+const LINES = [                            // ragged-left, top bar is the LONGEST (matches logo)
+  { x0: 126, x1: XR, cy: 108 },             // longest, near b top
+  { x0: 207, x1: XR, cy: 165 },
+  { x0: 220, x1: XR, cy: 222 },            // shortest
+  { x0: 200, x1: XR, cy: 278 },            // near b bottom
 ];
 const WAVE_CYCLES = 2.3, WAVE_AMP = 9;
 
@@ -342,8 +342,8 @@ function BoardenSplash() {
       <BoardenMark t={t}/>
       <div style={{
         position: "absolute", left: 0, right: 0, top: 1180, textAlign: "center",
-        fontFamily: '"Lexend Deca", sans-serif', fontWeight: 500, fontSize: 88,
-        letterSpacing: "0.005em", color: BRAND.ink,
+        fontFamily: '"Lexend Deca", sans-serif', fontWeight: 500, fontSize: 100,
+        letterSpacing: "0.005em", color: "#FFFFFF",
         opacity: wP, transform: `translateY(${(1 - wP) * 16}px)`,
       }}>boarden</div>
     </div>
